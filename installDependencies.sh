@@ -5,8 +5,10 @@ wget -O gdrive "https://docs.google.com/uc?id=0B3X9GlR6EmbnQ0FtZmJJUXEyRTA&expor
 
 chmod +x gdrive
 
-apt install p7zip-full
+sudo apt update
 
-apt install byobu
+sudo apt install p7zip-full
 
-apt install fail2ban
+sudo apt install byobu
+
+sudo apt install fail2ban
