@@ -8,3 +8,7 @@ sleep 5
 chmod +x gdrive
 
 apt install p7zip-full
+
+apt install byobu
+
+apt install fail2ban
