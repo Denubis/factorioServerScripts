@@ -1,14 +1,13 @@
 #!/bin/bash
 set -euo pipefail
 
-wget -O gdrive "https://docs.google.com/uc?id=0B3X9GlR6EmbnQ0FtZmJJUXEyRTA&export=download"
+if [[ $EUID -eq 0]]; then
+	echo "this should not be run as root or using sudo"
+	exit 1
+fi
 
-chmod +x gdrive
+#Update Packages
+sudo apt-get update
 
-sudo apt update
-
-sudo apt install p7zip-full
-
-sudo apt install byobu
-
-sudo apt install fail2ban
+#Install common packages
+sudo apt-get -y install byobu p7zip-full fail2ban
